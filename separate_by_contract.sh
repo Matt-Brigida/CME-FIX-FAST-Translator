@@ -1,11 +1,14 @@
 #! /bin/bash
 
 ## prompt for file name and ticker
-echo "Enter the filename."
-read file
+echo "Enter the input filename."
+read infile
+
+echo "Enter the output filename."
+read outfile
 
 echo "Enter the symbol."
 read ticker
 
-cat $file | grep $ticker > outFile
+cat $infile | grep "$ticker" > $outfile
 

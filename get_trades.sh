@@ -1,7 +1,10 @@
 #! /bin/bash
 
 ## Extract only messages with trades
-echo "Enter the filename."
-read file
+echo "Enter the input filename."
+read infile
 
-cat $file | grep MDEntryType=2 > tradesOut
+echo "Enter the output filename."
+read outfile
+
+cat $infile | grep MDEntryType=2 > $outfile
